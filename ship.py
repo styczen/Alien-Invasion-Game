@@ -13,7 +13,7 @@ class Ship():
 	
 		# Start each new ship at the bottom center of the screen.
 		self.rect.centerx = self.screen_rect.centerx
-		self.rect.centery = self.screen_rect.centery
+		self.rect.bottom = self.screen_rect.bottom
 		
 		# Store a decimal value for the ship's center.
 		self.centerx = float(self.rect.centerx)
@@ -33,10 +33,10 @@ class Ship():
 		if self.moving_left and self.rect.left > 0:
 			self.centerx -= self.ai_settings.ship_speed_factor
 			
-		if self.moving_up and self.rect.top > 0:
+		'''if self.moving_up and self.rect.top > 0:
 			self.centery -= self.ai_settings.ship_speed_factor
 		if self.moving_down and self.rect.bottom < self.screen_rect.bottom:
-			self.centery += self.ai_settings.ship_speed_factor
+			self.centery += self.ai_settings.ship_speed_factor'''
 			
 		# Update rect object from self.center
 		self.rect.centerx = self.centerx
